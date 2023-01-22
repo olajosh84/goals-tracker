@@ -6,6 +6,6 @@ This application helps you keep track of your daily, weekly, monthly or yearly g
 
 One of the weaknesses of this app is that the local storage resides in the browser that is used to open the application. As a result, the goals are only saved in that particular browser and not globally(the device). In the same vein, your goals may not save if the browser storage is full, and so you will need to always ensure you have enough storage space before saving.
 
-## Tecnologies Used
+## Languages Used
 
-The technologies used include HTML, CSS and Javascript.
+The languages used include HTML, CSS and Javascript.
