@@ -1,0 +1,534 @@
+/*
+=======================
+Global Styles
+=======================
+*/
+*,
+::before,
+::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+    --bg-color-1: #f1f5f8;
+    --bg-color-2: #fff;
+    --font-color-1: #324d67;
+    --font-color-2: #4a5562;
+    --btn-hover-color: #222;
+    
+}
+.dark-mode{
+    --bg-color-1: #0d2735;
+    --bg-color-2: #0b212d;
+    --font-color-1: #fff;
+    --font-color-2: #fff;
+    --btn-hover-color: #222;
+
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-color-1);
+    transition: all 0.4s ease-in-out;
+}
+h2{
+    color: var(--font-color-1);
+    text-transform: capitalize;
+    font-size: 1.3rem;
+    /*font-weight: 200;*/
+    letter-spacing: 0.1rem;
+}
+p{
+    color: var(--font-color-2);
+    letter-spacing: 0.1rem;
+    line-height: 1.5rem;
+    text-align: justify;
+}
+p::first-letter{
+    text-transform: capitalize;
+}
+
+/*
+============================
+Form Section
+============================
+*/
+.form-section{
+    width: 95vw;
+    max-width: 800px;
+    margin: 2rem auto;
+    /*border: 1px solid #222;*/
+    padding: 2rem 1rem;
+    background-color: var(--bg-color-2); 
+    box-shadow: 0 3px 3px rgba(0,0,0,0.2);
+    transition: all 0.4s ease-in-out;
+}
+.form-input{
+    width: 100%;
+    padding: 0.5rem 0.5rem;
+   
+}
+
+.form-input-added{
+    width: 100%;
+    padding: 0.5rem 0.5rem;
+}
+.form-input:focus, .form-input-added{
+    outline: none;
+}
+.input-details{
+    display: flex;
+    margin-bottom: 1rem; 
+}
+.input-border{
+    border: 1px solid dodgerblue;
+}
+#add-btn{
+    cursor: pointer;
+    background-color: transparent;
+    border: 1px solid #ddd;
+    padding: 0.3rem 0;
+    transition: all 0.4s ease;
+    color: var(--font-color-1);
+}
+#add-btn:hover{
+    background-color: #f2f2f2;
+    color: var(--btn-hover-color);
+}
+.minus-btn{
+    background-color: transparent;
+    border: 1px solid #ddd;
+    padding: 0 0.3rem 0 0.3rem;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    color: #f82249;
+}
+.minus-btn:hover{
+    background-color: #f2f2f2;
+}
+.submit-btn{
+    width: 100%;
+    border: none;
+    padding: 0.6rem 0.6rem;
+    background-color: dodgerblue;/*#0275d8*/
+    text-align: center;
+    letter-spacing: 0.2rem;
+    color: #fff;
+    text-transform: capitalize;
+    cursor: pointer;
+    font-size: 1rem;
+    display: none;
+}
+.goals-form{
+    display: grid;
+    gap: 1rem;
+}
+
+/*
+======================
+Heading
+======================
+*/
+
+.heading{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 2rem 0;
+}
+.title{
+    text-align: center;
+}
+.underline{
+    width: 3rem;
+    height: 3px;
+    background-color: dodgerblue;
+    border-radius: 15px;
+}
+
+/*
+======================
+Color Mode Button
+======================
+*/
+.color-mode{
+    position: absolute;
+    top: 2.2rem;
+    left: 2%;
+    background-color: transparent;
+    border: 1px solid #0275d8;
+    transition: all 0.4s ease-in-out;
+    border-radius: 10px;
+    padding: 0.1rem 1rem;
+    box-shadow: var(--box-shadow-light);
+    cursor: pointer;
+}
+.color-mode span{
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+}
+.change{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #0275d8;
+    width: 50%;
+    height: 100%;
+    border-radius: 10px;
+    display: block;
+    transition: all 0.4s ease-in-out;
+}
+
+.switch-mode .change{
+    left: 50%;
+}
+
+/*
+=======================
+Goals Section
+=======================
+*/
+.goals-section{
+    width: 95vw;
+    max-width: 800px;
+    margin: 0.5rem auto;
+    display: grid;
+    gap: 1rem;
+    
+}
+
+.goals{
+    display: grid;
+    gap: 1rem;
+    
+}
+.goal-details{
+    display: flex;
+    justify-content: space-between;
+}
+.goal{
+    background-color: var(--bg-color-2);
+    box-shadow: 0 3px 3px rgba(0,0,0,0.2);
+    padding: 0.5rem 0.5rem;
+    width: 100%;
+    transition: all 0.4s ease-in-out;
+}
+.achieved-goal{
+    text-decoration: line-through;
+    color: gray;
+}
+.goal-action-btn{
+    background-color: transparent;
+    border: 1px solid #ddd;
+    /*padding: 0 0.3rem 0 0.3rem;*/
+    cursor: pointer;
+    line-height: 1.5rem;
+    box-shadow: 0 3px 3px rgba(0,0,0,0.2);
+    border-radius: 0 10px 10px 0;
+}
+.switch-btn{
+    background-color: transparent;
+    border: 1px solid #ddd;
+    box-shadow: 0 3px 3px rgba(0,0,0,0.2);
+    padding: 0.2rem 0.3rem;
+    border-radius: 10px 0 0 10px;
+    transition: all 0.4s ease;
+    position: relative;
+    line-height: 1.5rem;
+    cursor: pointer;
+    /*transform: rotate(90deg);*/
+}
+.switch-btn span{
+    cursor: pointer;
+    display: block;
+    text-align: center;
+    font-size: 1rem;
+}
+.switch{
+    background-color: dodgerblue;
+    display: block;
+    width: 100%;
+    height: 50%;
+    border-radius: 5px;
+    transition: all 0.4s ease;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.slide .switch{
+    bottom: 50%;
+}
+
+.fas{
+    font-size: 0.8rem;
+    cursor: pointer;
+}
+.fa-edit{
+    color: dodgerblue;
+}
+.fa-trash-alt{
+    color: #f82249;
+}
+.fa-check-circle{
+    color: green;
+}
+.fa-times-circle{
+    color: #f82249;
+}
+
+.clear-btn{
+    width: 100%;
+    border: none;
+    padding: 0.6rem 0.6rem;
+    background-color: #f82249;
+    text-align: center;
+    letter-spacing: 0.2rem;
+    color: #fff;
+    text-transform: capitalize;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 5px;
+    margin-top: 1rem;
+}
+/*
+===================
+Alert
+===================
+*/
+.alert{
+    padding: 0.5rem 0.4rem;
+    text-align: center;
+    color: #fff;
+    letter-spacing: 0.1rem;
+    background-color: #fff;
+    box-shadow: 0 3px 3px rgba(0,0,0,0.2);
+    width: 95vw;
+    max-width: 800px;
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 2rem;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.alert > p::first-letter{
+    text-transform: capitalize;
+}
+.alert > p{
+    font-size: 0.8rem;
+}
+.alert-success{
+    color: green;
+}
+.alert-danger{
+    color: #f82249;
+}
+.alert-danger p{
+    color: #f82249;
+}
+.alert-success p{
+    color: green;
+}
+.show-alert{
+    display: flex;
+    animation: showAlert 1s ease-in-out;
+}
+.hide-alert{
+    display: none;
+    animation: hideAlert 1s ease-in-out;
+}
+.error-message{
+    color: #f82249;
+    letter-spacing: 0.1rem;
+}
+.error-message::first-letter{
+    text-transform: capitalize;
+}
+
+/*
+==================
+Prompter
+==================
+*/
+.prompter-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 0.3rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: prompter 0.6s ease-in-out infinite;
+    /*display: none;*/
+}
+.prompter{
+    font-size: 1rem; 
+    color: orange;
+}
+.prompter-text{
+    font-size: 0.8rem;
+}
+
+/*
+==============================
+Congratulations Modal
+==============================
+*/
+#congrats-message{
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background-color: rgba(0,0,0,0.4);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /*justify-content: center;*/
+    transition: all 0.4s ease-in-out;
+    overflow: auto;
+    border-radius: 10px;
+    box-shadow: 0 3px 3px rgba(0,0,0,0.4);
+    display: none;
+}
+.show-message{
+    display: none;
+}
+#message-content{
+    background-color: var(--bg-color-1);
+    border-radius: 5px;
+    box-shadow: 0 3px 3px rgba(0,0,0,0.3);
+    margin: 10rem auto;
+    width: 90vw;
+    max-width: 800px;
+    padding: 2rem 1rem;
+    text-align: center;
+    animation: congrats 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+}
+#message-content h2{
+    margin-bottom: 2rem;
+    color: var(--font-color-1);
+}
+#cancel-message{
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    cursor: pointer;
+    color: #fff;
+    font-weight: 700;
+
+}
+#cancel-message i{
+    font-size: 50px;
+}
+#check-btn{
+    background-color: #0275d8;
+    color: #fff;
+    padding: 0.2rem 1rem;
+    border-radius: 5px;
+    margin-bottom: 2rem;
+}
+#check-btn .fas{
+    font-size: 2.5rem;
+}
+#home-btn{
+    border: none;
+    padding: 0.5rem 0.8rem;
+    text-align: center;
+    border-radius: 15px;
+    color: white;
+    text-transform: capitalize;
+    font-size: 0.85rem;
+    letter-spacing: 0.25rem;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    background-color: #0275d8;
+
+}
+
+/*
+================
+top link
+================
+*/
+#top-link{
+    position: fixed;
+    bottom: 5%;
+    right: 4.5%;
+    z-index: 1;
+    display: none;
+}
+#top-link button{
+    border: none;
+    border-radius: 5px;
+    background-color: #0275d8;
+    opacity: 0.7;
+    color: #fff;
+    padding: 0.4rem 0.6rem;
+    text-align: center;
+    font-size: 1rem;
+    text-transform: capitalize;
+    letter-spacing: var(--spacing);
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+#top-link button:hover{
+    opacity: 1;
+}
+/*
+==================
+keyframes
+==================
+*/
+@keyframes showAlert{
+    0%{
+        top: -100%;
+    }
+   
+    100%{
+         top: 2rem;
+    }
+}
+
+@keyframes prompter{
+    0%{
+
+        top: 15.5rem;
+    }
+    100%{
+        top: 15rem;
+    }
+}
+
+@keyframes congrats{
+    0%{
+        transform: translateY(-100%);
+    }
+    100%{
+        transform: translateY(0%);
+    }
+}
+
+/*
+======================
+Media Queries
+======================
+*/
+@media screen and (min-width: 800px){
+    .color-mode{
+        left: 20.5%;
+    }
+}

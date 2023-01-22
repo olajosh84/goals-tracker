@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en" id="home">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Goals Tracker</title>
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+        <link rel="stylesheet" href="./assets/css/styles.css">
+    </head>
+    <body>
+        <button class="color-mode" title="Switch Color Mode">
+            <span></span>
+            <span></span>
+            <span class="change"></span>
+        </button>
+        <header class="heading">
+            <h2 class="title">Goals Tracker</h2>
+            <div class="underline"></div>
+        </header>
+        <section class="form-section">
+            <div class="alert">
+                <i class="alert-icon fas"></i>
+                <p></p>
+                <i class="fas fa-times alert-cancel"></i>
+            </div>
+            
+            <form id="goals-form" class="goals-form">
+                <select id="goal-period" class="form-input">
+                    <option value="today">Today</option>
+                    <option value="week">Week</option>
+                    <option value="month">Month</option>
+                    <option value="year">Year</option>
+                </select>
+                <div id="form-inputs">
+                    <!--newly added form fields go here-->
+                </div>
+                <button id="add-btn" title="Add new goal">
+                    <i class="fas fa-plus"></i>
+                </button>
+                <div class="prompter-container">
+                    <i class="fas fa-hand-pointer prompter"></i>
+                    <p class="prompter-text">click to add a goal</p>
+                    <!--<p class="prompter">&#9757;</p>-->
+                    <!--<i style="font-size: 30px" class="fas fa-hand-point-up"></i>-->
+                </div>
+                
+                <button id="submit-btn" class="submit-btn">submit</button>
+            </form>
+            
+        </section>
+        <section class="goals-section">
+            <h2 class="title">My <span id="subtitle1">Goal</span> for <span id="subtitle2">today</span></h2>
+            <div class="goals">
+                <!--goals go here-->
+            </div>
+            <button class="clear-btn">clear goals</button>
+        </section>
+        <div id="congrats-message">
+            <div id="cancel-message"><i class="fas fa-times"></i></div>
+            <div id="message-content">
+                <button id="check-btn">
+                    <!--<i class="fas fa-check"></i>-->
+                    <i class="fas fa-thumbs-up"></i>
+                </button>
+                <h2>Congratulations on achieving all your goals!</h2>
+                <!--<a href="index.html"><button id="home-btn">back home</button></a>-->
+            </div>
+        </div>
+         <!--top link-->
+        <div id="top-link">
+            <a href="#home" title="Back to top"><button><i class="fas fa-arrow-up"></i></button></a>
+        </div>
+        
+        <script src="assets/js/nanoid.js" type="text/javascript"></script>
+        <script src="assets/js/main.js" type="text/javascript"></script>
+        <script src="assets/js/confetti.js" type="text/javascript"></script>
+
+        <script>
+            const colorMode = document.querySelector(".color-mode");
+            colorMode.addEventListener('click', (e) =>{
+                e.currentTarget.classList.toggle('switch-mode');
+                document.body.classList.toggle("dark-mode");
+            })
+            //toplink
+            const topLink = document.getElementById("top-link");
+            window.addEventListener("scroll", function(){
+                let windowHeight = this.scrollY;
+                if(windowHeight >= 100){
+                    topLink.style.display = "block"; 
+                }else{
+                    topLink.style.display = "none"; 
+                }
+            })
+        </script>
+    </body>
+</html>
