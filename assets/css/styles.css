@@ -339,11 +339,11 @@ Alert
 }
 .show-alert{
     display: flex;
-    animation: showAlert 1s ease-in-out;
+    animation: showAlert 0.4s ease-in-out;
 }
 .hide-alert{
     display: none;
-    animation: hideAlert 1s ease-in-out;
+    animation: hideAlert 0.4s ease-in-out;
 }
 .error-message{
     color: #f82249;
