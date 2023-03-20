@@ -1,6 +1,7 @@
 # Goals Tracker App
 
 This application helps you keep track of your daily, weekly, monthly or yearly goals. It does this by not only showing your goals on the DOM but also saving them in the local storage for later. You can add and save as many goals as possible with the click of a button. You can also remove any form field before clicking the submit button. There are 3 buttons attached to each saved goal: The Edit button which helps to update the goal; the Delete button which helps to delete the goal and; the Switch button which switches between an achieved and unachieved goal. Finally, there is the Clear button below all the saved goals which clears the list of goals both from the DOM and local storage.
+Please visit https://olajeksgoalstracker.netlify.app to view this app.
 
 ## Suggested Improvements
 

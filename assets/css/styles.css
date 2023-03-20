@@ -16,7 +16,7 @@ Global Styles
     --font-color-1: #324d67;
     --font-color-2: #4a5562;
     --btn-hover-color: #222;
-    
+    --input-bg-color: transparent;
 }
 .dark-mode{
     --bg-color-1: #0d2735;
@@ -24,7 +24,7 @@ Global Styles
     --font-color-1: #fff;
     --font-color-2: #fff;
     --btn-hover-color: #222;
-
+    --input-bg-color: #f2f2f2;
 }
 html{
     scroll-behavior: smooth;
@@ -69,12 +69,15 @@ Form Section
 .form-input{
     width: 100%;
     padding: 0.5rem 0.5rem;
-   
+    font-size: 0.9rem;
 }
 
 .form-input-added{
     width: 100%;
     padding: 0.5rem 0.5rem;
+    font-size: 0.9rem;
+    border: 1px solid #ccc;
+    background-color: var(--input-bg-color);
 }
 .form-input:focus, .form-input-added{
     outline: none;
@@ -89,7 +92,7 @@ Form Section
 #add-btn{
     cursor: pointer;
     background-color: transparent;
-    border: 1px solid #ddd;
+    border: 1px solid #ccc;
     padding: 0.3rem 0;
     transition: all 0.4s ease;
     color: var(--font-color-1);
@@ -100,7 +103,7 @@ Form Section
 }
 .minus-btn{
     background-color: transparent;
-    border: 1px solid #ddd;
+    border: 1px solid #ccc;
     padding: 0 0.3rem 0 0.3rem;
     cursor: pointer;
     transition: all 0.4s ease;
