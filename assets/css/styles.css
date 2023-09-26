@@ -24,7 +24,10 @@ Global Styles
     --font-color-1: #fff;
     --font-color-2: #fff;
     --btn-hover-color: #222;
-    --input-bg-color: #f2f2f2;
+    --input-bg-color: #0b212d;
+    --input-text-color: #fff;
+    --select-bg-color: #0b212d;
+    --select-text-color: #fff;
 }
 html{
     scroll-behavior: smooth;
@@ -71,6 +74,10 @@ Form Section
     padding: 0.5rem 0.5rem;
     font-size: 0.9rem;
 }
+#goal-period{
+    background-color: var(--select-bg-color);
+    color: var(--select-text-color);
+}
 
 .form-input-added{
     width: 100%;
@@ -78,6 +85,7 @@ Form Section
     font-size: 0.9rem;
     border: 1px solid #ccc;
     background-color: var(--input-bg-color);
+    color: var(--input-text-color);
 }
 .form-input:focus, .form-input-added{
     outline: none;
